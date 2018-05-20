@@ -4,8 +4,12 @@ class View {
         this._elemento = elemento
     }
 
+    template(){
+        throw new Error ('Template method must be implemented')
+    }
+
     update(model){
-        this._elemento.innerHTML = this._template(model)
+        this._elemento.innerHTML = this.template(model)
     }
 
 
